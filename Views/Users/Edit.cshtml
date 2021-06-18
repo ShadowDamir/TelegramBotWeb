@@ -1,0 +1,46 @@
+﻿@model TelegramBotWeb.Models.Users
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Users</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ChatId" />
+            <div class="form-group">
+                <label asp-for="Username_real" class="control-label"></label>
+                <input asp-for="Username_real" class="form-control" />
+                <span asp-validation-for="Username_real" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Username" class="control-label"></label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastBotMessage" class="control-label"></label>
+                <input asp-for="LastBotMessage" class="form-control" />
+                <span asp-validation-for="LastBotMessage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstMessageTime" class="control-label"></label>
+                <input asp-for="FirstMessageTime" class="form-control" />
+                <span asp-validation-for="FirstMessageTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
